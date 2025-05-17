@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  cloudflare-ddns:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloudflare-ddns
+    restart: unless-stopped
+    environment:
+      - CLOUDFLARE_ZONE_ID= # TODO - Add Zone ID
+      - CLOUDFLARE_AUTH_EMAIL= # TODO - Add Email
+      - CLOUDFLARE_AUTH_KEY= # TODO - Add API Key
+      - DOMAIN_NAME= # TODO - Add Domain Name
+      - UPDATE_INTERVAL=3600  # Update every hour (in seconds)
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -1,6 +1,6 @@
 # Cloudflare Dynamic DNS Updater
 
-This is a Python-based solution that provides dynamic DNS functionality by automatically updating your Cloudflare DNS records with your current public IP address.
+This is a Python-based solution that provides dynamic DNS functionality by automatically updating your Cloudflare DNS records with your current public IP address!
 
 ## Features
 
